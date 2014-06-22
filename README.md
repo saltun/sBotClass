@@ -4,7 +4,7 @@ require_once "sbotClass.php";
 
 WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) 
 
-- eklenti biçiminde kullanım için uygundur demo kullanım için example klasörüne bakınız.. 
+- eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. 
 
 
 Sınıfı Dahil Edelim
@@ -81,7 +81,7 @@ $sBot->addPost(true);
 </pre>
 
 
-Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example klasörün'deki örneği inceleye bilirsiniz
+Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.
 
 Author : Savaş Can Altun
 Mail : savascanaltun@gmail.com
