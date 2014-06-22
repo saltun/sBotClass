@@ -12,7 +12,7 @@ cLass sBotClass{
 public $thumbnail;
 public $title;
 public $content;
-public $author;
+public $author=1;
 public $tags;
 public $cat;
 
@@ -22,9 +22,7 @@ public $cat;
         if(!function_exists('wp_get_current_user')) {
               include(ABSPATH . "wp-includes/pluggable.php"); 
         }
-          if (empty($this->author)) {
-                 $this->author=1;
-             }       
+                
     }
 
   public function sef($s) {
