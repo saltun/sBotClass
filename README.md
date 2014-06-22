@@ -1,15 +1,17 @@
 sBotClass
 =========
-require_once "sbotClass.php";
+
 
 WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) 
 
 - eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. 
 
 
-Sınıfı Dahil Edelim
+Sınıfı Dahil Edelim ve Calıştırıp sBot değişkenine Atıyalım
 ===========================
 <pre>
+require_once "sbotClass.php";
+
 $sBot = new sBotClass();
 </pre>
 
