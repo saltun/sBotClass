@@ -1,5 +1,6 @@
 sBotClass
 =========
+require_once "sbotClass.php";
 
 WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) 
 
