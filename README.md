@@ -7,7 +7,7 @@ WordPress Bot Yazma Sınıfı ( Wordpress Bot Class )
 - eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. 
 
 
-Sınıfı Dahil Edelim ve Calıştırıp sBot değişkenine Atıyalım
+Sınıfı yükleyip Calıştıralım
 ===========================
 <pre>
 require_once "sbotClass.php";
