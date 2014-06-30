@@ -109,14 +109,14 @@ public $cat;
           );
 
 
-          $attachment_id=wp_insert_attachment($attachment, $filename, $post_id);
+          $attach_id=wp_insert_attachment($attachment, $filename, $post_id);
 
 
 
           require_once( ABSPATH . 'wp-admin/includes/image.php' );
           $attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
           wp_update_attachment_metadata( $attach_id, $attach_data );
-          set_post_thumbnail($post_id,$attachment_id);
+          set_post_thumbnail($post_id,$attach_id);
 
   }
 
