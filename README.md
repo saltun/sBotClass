@@ -6,6 +6,14 @@ WordPress Bot Yazma Sınıfı ( Wordpress Bot Class )
 
 - eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. 
 
+Dikkat ( Watch out! ) 
+=========
+Tr : 
+Sınıfı kullanmak için wp-content klasörünün içine uploads klasörünü  ve bunun içinde'de images klasörünü oluşturmuş olmanız gerekir.
+
+En : 
+To use the class wp-content uploads folder into the folder and the images folder inside of it must be created.
+
 
 Sınıfı yükleyip Calıştıralım
 ===========================
