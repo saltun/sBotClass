@@ -55,6 +55,19 @@ içeriği ekliyen yazarın id'sini belirmek isterseniz author parametresini kull
 $sBot->author=1;
 </pre>
 
+Özel Alanlar ( custom fields ) 
+===========================
+Temalarınıza özel alanları doldurmanız için güncellendi ( 26.07.2014 )  kullanımı basitce
+<pre>
+$sBot->metas=array(
+			'keywords'=>'values',
+			'keywords'=>'values'
+			);
+</pre>
+
+
+burada dilediğiniz kadar özel alan kullana bilirsiniz yapmanız gereken sadece kelime ( özel alan adını ) yazıp ona değer olarak belirtilen değerleri göndermek sınıf sizin için otomatik olarak özel alanı oluşturup verdiğiniz value ( değeri ) üzerine işleyecektir.
+
 Öne Çıkarılan Görsel ( thumbnail )
 ===========================
 
