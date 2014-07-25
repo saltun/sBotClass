@@ -5,6 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
+* Update : 27.07.2014
 */
 
 cLass sBotClass{
@@ -15,6 +16,7 @@ public $content;
 public $author=1;
 public $tags;
 public $cat;
+public $metas;
 
 
   public function __construct(){
@@ -88,7 +90,20 @@ public $cat;
 		            add_post_meta($post_id,"_aioseop_keywords",$this->tags);
 	            // all in one seo 
          	}
-          
+
+
+          // add meta tags ( çzel alanları ekle )
+          if (isset($this->metas)) {
+              $count=count($this->metas);
+
+
+  
+                $keys=array_keys($this->metas);
+                $values=array_values($this->metas);
+                  for ($i=0; $i < $count; $i++) { 
+                          add_post_meta($post_id,$keys[$i],$values[$i]);
+                  }
+          }
               
 
    
