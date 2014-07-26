@@ -38,7 +38,7 @@ function sBotClass(){
 
 
 		$sBot = new sBotClass();
-		$sBot->thumbnail = "http://i.hizliresim.com/e7lBPa.jpg"; 
+		$sBot->thumbnail = "http://savascanaltun.com/sca.jpeg"; 
 		$sBot->title="test";
 		$etiketler="test,test";
 		$sBot->content="bla bla";
