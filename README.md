@@ -104,6 +104,31 @@ $sBot->addPost(true);
 </pre>
 
 
+Yayınların Durumunu belirleme 
+===========================
+yayınların durumunu belirlemek için "status" değişkenine durumu göndermeniz gerekmektedir kullana bileceğiniz durumlar ve anlamları altta listelenmiştir
+
+- Taslak : draft 
+- Açık / Yayında :  publish 
+- Beklemede :  pending
+- Zamanlanmış : future ( eğer zamanlamış iseniz "time" değişkenine taslağın yayınlanacağı tarihi giriniz örnek 2014-07-27 18:00:00 )
+- Özel : private
+
+
+defult olarak publish değerini almaktadır örnek kullanım
+
+<pre>
+$sBot->status="draft";
+</pre>
+
+Yayını Zamanlama
+===========================
+Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s ) yani -> 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
+örnek kullanımı
+<pre>
+$sBot->time="2014-07-27 18:00:00";
+</pre>
+
 Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.
 
 Author : Savaş Can Altun
