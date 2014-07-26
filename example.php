@@ -1,14 +1,14 @@
 <?php
-require_once "sbotClass.php";
+
 /*
 
-Plugin Name: Sbot
+Plugin Name: sBotClass
 
 Plugin URI: http://savascanaltun.com.tr
 
-Description: Sbot örnek Uygulaması
+Description: sBotClass örnek kullanım eklentisi
 
-Author: Savaş Can Altun
+Author: Savaş Can ALTUN 
 
 Version: 1.0
 
@@ -17,115 +17,53 @@ Author URI: http://savascanaltun.com.tr
 */
 
 
+add_action("admin_menu","botMenu");
 
-define('siteAdresi',get_option('siteurl'));
-
-
-
-add_action("admin_menu","transMenu");
-
-function transMenu()
+function botMenu()
 
 {
 
-	add_menu_page( "Ana Sayfa", "TransBot", 10, "TransBot", "TransBot", NULL, "154" );
-
-
-
+	add_menu_page( "Ana Sayfa", "sBotClass", 10, "sBotClass", "sBotClass", NULL, "145" );
 
 
 }
-function TransBot(){
 
-	if ($_POST) {
+
+function sBotClass(){
+
+
+
+
+		include "sbotClass.php";
 
 
 		$sBot = new sBotClass();
-		$sBot->thumbnail = $sBot->download_image("http://www.savascanaltun.com/bannerler/125x125.png"); //"/path/to/wp-content/uploads/logo.png";
-		$sBot->title="Deneme Başlık";
-		$sBot->content="Deneme İçerik";
-		$sBot->tags="sada,asdas";
-		$sBot->cat=$_POST['kat'];
+		$sBot->thumbnail = "http://i.hizliresim.com/e7lBPa.jpg"; 
+		$sBot->title="test";
+		$etiketler="test,test";
+		$sBot->content="bla bla";
+		$sBot->tags=$etiketler;
+
+		/*
+		status kısmının ala bileceği değerler
+		 ---------------
+		 * Taslak : draft 
+		 * Açık / Yayında :  publish 
+		 * Beklemede :  pending
+		 * Zamanlanmış : future ( eğer zamanlamış iseniz "time" değişkenine taslağın yayınlanacağı tarihi giriniz örnek 2014-07-27 18:00:00 )
+		 * Özel : private
+		 */
+		$sBot->status="publish";
+		$sBot->time="2014-07-27 18:00:00";
+
+		$sBot->cat=1;
 		$sBot->author=1;
+		$sBot->metas=array(
+			'link'=>'http://x.com/1.rar',
+			'adres'=>'http://x.com/1.rar',
+			'gorsel'=>'http://savascanaltun.com/sca.jpeg'
+			);
 		$sBot->addPost(true);
-
-
-	}
-
-echo '
-
-
-<style type="text/css">
-table.savas_tablo {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #666666;
-	border-collapse: collapse;
-	width:95%;
-}
-table.savas_tablo th {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #666666;
-	background-color: #eee;
-}
-table.savas_tablo td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #666666;
-	background-color: #ffffff;
-}
-</style>
-';
-
-
-
-echo '
-
-
-
-
-
-
-<table class="savas_tablo">
-
-<form action="" method="POST">
-<tr>
-	<th >Konu Resmi</th><th>Başlık</th><th>Kategori</th>
-</tr>
-<tr>
-	<td rowspan="5"><center><img src="'; echo "http://www.savascanaltun.com/bannerler/125x125.png"; echo '" width="150px" height="150px" /></center></td>
-	
-	<input type="hidden" name="resim" value="'; echo "http://www.savascanaltun.com/bannerler/125x125.png"; echo '" />
-
-
-	<td><input style="width:400px" value="'; echo "Deneme İçerik"; echo '" name="baslik" /></td>
-	<td>
-		';
-		echo wp_dropdown_categories("id=kategori&name=kat&echo=0&hierarchical=1&hide_empty=0");
-
-echo '
-	</td>
-</tr>
-<tr>
-	<td colspan="2"><button style="width:100%;height:100px;" >İçeriği ekle</button></td>
-</tr>
-<tr>		
-</tr>
-</form>
-</table>
-
-';
-
-
-
-
-echo '<p id="footer-left" class="alignleft"><span id="footer-thankyou">TransBot un tüm hakları <a href="http://savascanaltun.com.tr/" title="webmaster">Savaş Can Altun</a> a aittir. </span></p>';
-
 
 }
 
