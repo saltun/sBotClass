@@ -17,7 +17,7 @@ public $author=1;
 public $tags;
 public $cat;
 public $metas;
-public $status;
+public $status="publish";
 public $time=NULL;
 
 
@@ -96,7 +96,7 @@ public $time=NULL;
          	}
 
 
-          // add meta tags ( özel alanları ekle )
+          // add meta tags ( çzel alanları ekle )
           if (isset($this->metas)) {
               $count=count($this->metas);
 
