@@ -123,7 +123,7 @@ $sBot->status="draft";
 
 Yayını Zamanlama
 ===========================
-Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s ) yani -> 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
+Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s / Y-m-d H:i:s  ) yani -> 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
 örnek kullanımı
 <pre>
 $sBot->time="2014-07-27 18:00:00";
