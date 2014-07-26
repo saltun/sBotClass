@@ -17,6 +17,8 @@ public $author=1;
 public $tags;
 public $cat;
 public $metas;
+public $status;
+public $time=NULL;
 
 
   public function __construct(){
@@ -76,10 +78,12 @@ public $metas;
             $my_post = array();
             $my_post['post_title'] =  $this->title;
             $my_post['post_content'] = $this->content;
-            $my_post['post_status'] = 'publish';
+            $my_post['post_date_gmt'] = $this->time;
+            $my_post['post_status'] =  $this->status;
             $my_post['post_author'] = $this->content;
             $my_post['post_category'] = array($this->cat);
             $my_post['tags_input'] = $this->tags;
+
 
             $post_id= wp_insert_post( $my_post );
          
@@ -92,7 +96,7 @@ public $metas;
          	}
 
 
-          // add meta tags ( çzel alanları ekle )
+          // add meta tags ( özel alanları ekle )
           if (isset($this->metas)) {
               $count=count($this->metas);
 
