@@ -1,3 +1,5 @@
+[![Latest Stable Version](https://poser.pugx.org/leaphly/cart-bundle/version.svg)](https://packagist.org/packages/leaphly/cart-bundle) [![Latest Unstable Version](https://poser.pugx.org/leaphly/cart-bundle/v/unstable.svg)](//packagist.org/packages/leaphly/cart-bundle) [![Total Downloads](https://poser.pugx.org/leaphly/cart-bundle/downloads.svg)](https://packagist.org/packages/leaphly/cart-bundle)
+
 sBotClass
 =========
 
