@@ -63,7 +63,11 @@ function sBotClass(){
 			'adres'=>'http://x.com/1.rar',
 			'gorsel'=>'http://savascanaltun.com/sca.jpeg'
 			);
-		$sBot->addPost(true);
+			/*
+		* Birinci parametre true gider ise all in one seo alanları otomatik dolar
+		* ikinci alan true gider ise aynı içerikten var ise eklemez eğer false veya boş giderse aynı içerikten olsa dahi ekler
+		*/
+		$sBot->addPost(true,true);
 
 }
 
