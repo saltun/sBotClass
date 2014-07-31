@@ -113,10 +113,23 @@ Verileri son olarak kayıt etmek için addPost fonksiyonunu kullanmalısınız.
 <pre>
 $sBot->addPost();
 </pre>
-Not : All in one seo kısımlarını otomatik doldurmasını ister iseniz true parametresini gönderiniz örnek 
+
+
+Kullanım için 2 adet parametre göndere bilirsiniz bunlardan birincisi all in one seo alanlarının otomatik dolması için diğeri ise yazının eşsiz olup olmaması için kullana bilirsiniz örnek vericek olur isek 
+
+All in one seo alanlarının doldurulmasını istediğim için birinci parametre'ye true değeri gönderdim böylece all in one seo alanları dolduruldu 
 <pre>
 $sBot->addPost(true);
 </pre>
+
+İkinci örnek ise All in one seo ayarlarının doldurulmasını istedim ama eklenen yazıdan zaten sitemde var ise bir daha eklenmemesini istedim bundan dolayı ise ikinci parametre'ye de true değerini gönderdim 
+<pre>
+$sBot->addPost(true,true);
+</pre>
+
+eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. 
+
+
 
 
 Yayınların Durumunu belirleme 
