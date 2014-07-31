@@ -14,6 +14,21 @@ Sınıfı kullanmak için wp-content klasörünün içine uploads klasörünü  
 En : 
 To use the class wp-content uploads folder into the folder and the images folder inside of it must be created.
 
+Note 2 : 
+
+Tr : 
+Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olarak belirtirken resmin seo'ya uygun şekilde dosyanın adlanması için   "thumbnail" method'unu  "title" method'undan sonra kullanınız 
+
+En : Whether to download pictures from addresses in the classroom as it highlighted the picture when specifying the file in accordance with seo be termed the "thumbnail" the method "title" method after use
+
+Örnek ( example ) 
+<pre>
+	$sBot->title="Örnek Yazı - ";
+	$sBot->thumbnail =  $sBot->download_image("http://savascanaltun.com/sca.jpeg"); 
+		
+</pre>
+
+I Love You Translate -_-
 
 Sınıfı yükleyip Calıştıralım
 ===========================
