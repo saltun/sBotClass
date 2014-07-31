@@ -38,8 +38,8 @@ function sBotClass(){
 
 
 		$sBot = new sBotClass();
-		$sBot->thumbnail = "http://savascanaltun.com/sca.jpeg"; 
 		$sBot->title="test";
+		$sBot->thumbnail = "http://savascanaltun.com/sca.jpeg"; 
 		$etiketler="test,test";
 		$sBot->content="bla bla";
 		$sBot->tags=$etiketler;
