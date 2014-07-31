@@ -10,7 +10,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>sBotClass - WordPress Bot Class by saltun</title>
+    <title>sBotClass by saltun</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
       <div class="inner">
 
         <header>
-          <h1>sBotClass - WordPress Bot Class</h1>
+          <h1>sBotClass</h1>
           <h2>WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) </h2>
         </header>
 
@@ -31,41 +31,183 @@
         <hr>
 
         <section id="main_content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h1>
+<a name="sbotclass" class="anchor" href="#sbotclass"><span class="octicon octicon-link"></span></a>sBotClass</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) </p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<ul>
+<li>eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. </li>
+</ul><h1>
+<a name="dikkat--watch-out--" class="anchor" href="#dikkat--watch-out--"><span class="octicon octicon-link"></span></a>Dikkat ( Watch out! ) </h1>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Tr : 
+Sınıfı kullanmak için wp-content klasörünün içine uploads klasörünü  ve bunun içinde'de images klasörünü oluşturmuş olmanız gerekir.</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>En : 
+To use the class wp-content uploads folder into the folder and the images folder inside of it must be created.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Note 2 : </p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>Tr : 
+Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olarak belirtirken resmin seo'ya uygun şekilde dosyanın adlanması için   "thumbnail" method'unu  "title" method'undan sonra kullanınız </p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>En : Whether to download pictures from addresses in the classroom as it highlighted the picture when specifying the file in accordance with seo be termed the "thumbnail" the method "title" method after use</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Örnek ( example ) </p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<pre>
+    $sBot-&gt;title="Örnek Yazı - ";
+    $sBot-&gt;thumbnail =  $sBot-&gt;download_image("http://savascanaltun.com/sca.jpeg"); 
+        
+</pre>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>I Love You Translate -_-</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h1>
+<a name="s%C4%B1n%C4%B1f%C4%B1-y%C3%BCkleyip-cal%C4%B1%C5%9Ft%C4%B1ral%C4%B1m" class="anchor" href="#s%C4%B1n%C4%B1f%C4%B1-y%C3%BCkleyip-cal%C4%B1%C5%9Ft%C4%B1ral%C4%B1m"><span class="octicon octicon-link"></span></a>Sınıfı yükleyip Calıştıralım</h1>
+
+<pre>
+require_once "sbotClass.php";
+
+$sBot = new sBotClass();
+</pre>
+
+<h1>
+<a name="%C4%B0%C3%A7erik-i%C3%A7in-ba%C5%9Fl%C4%B1k-belirleme--title-" class="anchor" href="#%C4%B0%C3%A7erik-i%C3%A7in-ba%C5%9Fl%C4%B1k-belirleme--title-"><span class="octicon octicon-link"></span></a>İçerik için başlık belirleme ( title )</h1>
+
+<p>Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.</p>
+
+<pre>
+$sBot-&gt;title="Deneme Başlık - Title ";
+</pre>
+
+<h1>
+<a name="%C4%B0%C3%A7erik--content--" class="anchor" href="#%C4%B0%C3%A7erik--content--"><span class="octicon octicon-link"></span></a>İçerik ( Content ) </h1>
+
+<p>İçerik eklemek için ise basitce alttaki fonksiyonu kullanmanız yeterli.</p>
+
+<pre>
+$sBot-&gt;content="Deneme İçerik - Demo Content";
+</pre>
+
+<h1>
+<a name="etiketler--tags--" class="anchor" href="#etiketler--tags--"><span class="octicon octicon-link"></span></a>Etiketler ( Tags ) </h1>
+
+<p>İçeriğiniz için etiketleri tags parametresi ile göndere bilirsiniz. ( , ile ayırınız ) </p>
+
+<pre>
+$sBot-&gt;tags="tags,etiket,savascanaltun,php";
+</pre>
+
+<h1>
+<a name="kategori--category--" class="anchor" href="#kategori--category--"><span class="octicon octicon-link"></span></a>Kategori ( Category ) </h1>
+
+<p>Kategori belirmek içni kullanmanız gereken parametre " cat " bunu sorunsuz kullanmak için wordpress  wp_dropdown_categories fonksiyonunu incelemenizi öneririz.</p>
+
+<p>Kullanmanız gereken parametre </p>
+
+<pre>$sBot-&gt;cat</pre>
+
+<h1>
+<a name="yazar--author--" class="anchor" href="#yazar--author--"><span class="octicon octicon-link"></span></a>Yazar ( Author ) </h1>
+
+<p>içeriği ekliyen yazarın id'sini belirmek isterseniz author parametresini kullanmanız yeterli. default olarak 1'e ayarlıdır.</p>
+
+<pre>
+$sBot-&gt;author=1;
+</pre>
+
+<h1>
+<a name="%C3%96zel-alanlar--custom-fields--" class="anchor" href="#%C3%96zel-alanlar--custom-fields--"><span class="octicon octicon-link"></span></a>Özel Alanlar ( custom fields ) </h1>
+
+<p>Temalarınıza özel alanları doldurmanız için güncellendi ( 26.07.2014 )  kullanımı basitce</p>
+
+<pre>
+$sBot-&gt;metas=array(
+            'keywords'=&gt;'values',
+            'keywords'=&gt;'values'
+            );
+</pre>
+
+<p>burada dilediğiniz kadar özel alan kullana bilirsiniz yapmanız gereken sadece kelime ( özel alan adını ) yazıp ona değer olarak belirtilen değerleri göndermek sınıf sizin için otomatik olarak özel alanı oluşturup verdiğiniz value ( değeri ) üzerine işleyecektir.</p>
+
+<h1>
+<a name="%C3%96ne-%C3%87%C4%B1kar%C4%B1lan-g%C3%B6rsel--thumbnail-" class="anchor" href="#%C3%96ne-%C3%87%C4%B1kar%C4%B1lan-g%C3%B6rsel--thumbnail-"><span class="octicon octicon-link"></span></a>Öne Çıkarılan Görsel ( thumbnail )</h1>
+
+<p>Uzak Sunucudan  Resmi kendi sunucumuza kayıt etmek için alttaki download_image fonksiyonunu kullana bilirsiniz.</p>
+
+<pre>
+$sBot-&gt;thumbnail = $sBot-&gt;download_image("http://www.savascanaltun.com/bannerler/125x125.png");
+</pre>
+
+<p>Manuel olarak resmin adresini almak için ise ( dikkat etmemiz gereken kısım /path/to kısmıdır.</p>
+
+<pre>
+$sBot-&gt;thumbnail = "/path/to/wp-content/uploads/125x125.png";
+</pre>
+
+<h1>
+<a name="verileri-kay%C4%B1t-etmek" class="anchor" href="#verileri-kay%C4%B1t-etmek"><span class="octicon octicon-link"></span></a>Verileri Kayıt Etmek</h1>
+
+<p>Verileri son olarak kayıt etmek için addPost fonksiyonunu kullanmalısınız.</p>
+
+<pre>
+$sBot-&gt;addPost();
+</pre>
+
+<p>Kullanım için 2 adet parametre göndere bilirsiniz bunlardan birincisi all in one seo alanlarının otomatik dolması için diğeri ise yazının eşsiz olup olmaması için kullana bilirsiniz örnek vericek olur isek </p>
+
+<p>All in one seo alanlarının doldurulmasını istediğim için birinci parametre'ye true değeri gönderdim böylece all in one seo alanları dolduruldu </p>
+
+<pre>
+$sBot-&gt;addPost(true);
+</pre>
+
+<p>İkinci örnek ise All in one seo ayarlarının doldurulmasını istedim ama eklenen yazıdan zaten sitemde var ise bir daha eklenmemesini istedim bundan dolayı ise ikinci parametre'ye de true değerini gönderdim </p>
+
+<pre>
+$sBot-&gt;addPost(true,true);
+</pre>
+
+<p>eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. </p>
+
+<h1>
+<a name="yay%C4%B1nlar%C4%B1n-durumunu-belirleme-" class="anchor" href="#yay%C4%B1nlar%C4%B1n-durumunu-belirleme-"><span class="octicon octicon-link"></span></a>Yayınların Durumunu belirleme </h1>
+
+<p>yayınların durumunu belirlemek için "status" değişkenine durumu göndermeniz gerekmektedir kullana bileceğiniz durumlar ve anlamları altta listelenmiştir</p>
+
+<ul>
+<li>Taslak : draft </li>
+<li>Açık / Yayında :  publish </li>
+<li>Beklemede :  pending</li>
+<li>Zamanlanmış : future ( eğer zamanlamış iseniz "time" değişkenine taslağın yayınlanacağı tarihi giriniz örnek 2014-07-27 18:00:00 )</li>
+<li>Özel : private</li>
+</ul><p>defult olarak publish değerini almaktadır örnek kullanım</p>
+
+<pre>
+$sBot-&gt;status="draft";
+</pre>
+
+<h1>
+<a name="yay%C4%B1n%C4%B1-zamanlama" class="anchor" href="#yay%C4%B1n%C4%B1-zamanlama"><span class="octicon octicon-link"></span></a>Yayını Zamanlama</h1>
+
+<p>Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s / Y-m-d H:i:s  ) yani -&gt; 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
+örnek kullanımı</p>
+
+<pre>
+$sBot-&gt;time="2014-07-27 18:00:00";
+</pre>
+
+<p>Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.</p>
+
+<p>Author : Savaş Can Altun
+Mail : <a href="mailto:savascanaltun@gmail.com">savascanaltun@gmail.com</a>
+Web : savascanaltun.com.tr</p>
         </section>
 
         <footer>
-          sBotClass - WordPress Bot Class is maintained by <a href="https://github.com/saltun">saltun</a><br>
+          sBotClass is maintained by <a href="https://github.com/saltun">saltun</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
