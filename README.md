@@ -161,4 +161,4 @@ Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php do
 
 Author : Savaş Can Altun
 Mail : savascanaltun@gmail.com
-Web : savascanaltun.com.tr
+Web : http://savascanaltun.com.tr
