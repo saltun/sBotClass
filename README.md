@@ -67,7 +67,9 @@ Kategori belirmek içni kullanmanız gereken parametre " cat " bunu sorunsuz kul
 
 
 Kullanmanız gereken parametre 
-``` php$sBot->cat```
+``` php 
+$sBot->cat
+```
 
 
 Yazar ( Author ) 
