@@ -32,11 +32,11 @@ I Love You Translate -_-
 
 Sınıfı yükleyip Calıştıralım
 ===========================
-<pre>
+``` php
 require_once "sbotClass.php";
 
 $sBot = new sBotClass();
-</pre>
+```
 
 
 İçerik için başlık belirleme ( title )
