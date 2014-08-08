@@ -22,11 +22,11 @@ Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olar
 En : Whether to download pictures from addresses in the classroom as it highlighted the picture when specifying the file in accordance with seo be termed the "thumbnail" the method "title" method after use
 
 Örnek ( example ) 
-<pre>
+``` php
 	$sBot->title="Örnek Yazı - ";
 	$sBot->thumbnail =  $sBot->download_image("http://savascanaltun.com/sca.jpeg"); 
 		
-</pre>
+```
 
 I Love You Translate -_-
 
@@ -42,23 +42,23 @@ $sBot = new sBotClass();
 İçerik için başlık belirleme ( title )
 ===========================
 Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.
-<pre>
+``` php
 $sBot->title="Deneme Başlık - Title ";
-</pre>
+```
 
 İçerik ( Content ) 
 ===========================
 İçerik eklemek için ise basitce alttaki fonksiyonu kullanmanız yeterli.
-<pre>
+``` php
 $sBot->content="Deneme İçerik - Demo Content";
-</pre>
+```
 
 Etiketler ( Tags ) 
 ===========================
 İçeriğiniz için etiketleri tags parametresi ile göndere bilirsiniz. ( , ile ayırınız ) 
-<pre>
+``` php
 $sBot->tags="tags,etiket,savascanaltun,php";
-</pre>
+```
 
 
 Kategori ( Category ) 
@@ -67,26 +67,26 @@ Kategori belirmek içni kullanmanız gereken parametre " cat " bunu sorunsuz kul
 
 
 Kullanmanız gereken parametre 
-<pre>$sBot->cat</pre>
+``` php$sBot->cat```
 
 
 Yazar ( Author ) 
 ===========================
 içeriği ekliyen yazarın id'sini belirmek isterseniz author parametresini kullanmanız yeterli. default olarak 1'e ayarlıdır.
 
-<pre>
+``` php
 $sBot->author=1;
-</pre>
+```
 
 Özel Alanlar ( custom fields ) 
 ===========================
 Temalarınıza özel alanları doldurmanız için güncellendi ( 26.07.2014 )  kullanımı basitce
-<pre>
+``` php
 $sBot->metas=array(
 			'keywords'=>'values',
 			'keywords'=>'values'
 			);
-</pre>
+```
 
 
 burada dilediğiniz kadar özel alan kullana bilirsiniz yapmanız gereken sadece kelime ( özel alan adını ) yazıp ona değer olarak belirtilen değerleri göndermek sınıf sizin için otomatik olarak özel alanı oluşturup verdiğiniz value ( değeri ) üzerine işleyecektir.
@@ -96,36 +96,36 @@ burada dilediğiniz kadar özel alan kullana bilirsiniz yapmanız gereken sadece
 
 Uzak Sunucudan  Resmi kendi sunucumuza kayıt etmek için alttaki download_image fonksiyonunu kullana bilirsiniz.
 
-<pre>
+``` php
 $sBot->thumbnail = $sBot->download_image("http://www.savascanaltun.com/bannerler/125x125.png");
-</pre>
+```
 
 Manuel olarak resmin adresini almak için ise ( dikkat etmemiz gereken kısım /path/to kısmıdır.
-<pre>
+``` php
 $sBot->thumbnail = "/path/to/wp-content/uploads/125x125.png";
-</pre>
+```
 
 
 Verileri Kayıt Etmek
 ===========================
 Verileri son olarak kayıt etmek için addPost fonksiyonunu kullanmalısınız.
 
-<pre>
+``` php
 $sBot->addPost();
-</pre>
+```
 
 
 Kullanım için 2 adet parametre göndere bilirsiniz bunlardan birincisi all in one seo alanlarının otomatik dolması için diğeri ise yazının eşsiz olup olmaması için kullana bilirsiniz örnek vericek olur isek 
 
 All in one seo alanlarının doldurulmasını istediğim için birinci parametre'ye true değeri gönderdim böylece all in one seo alanları dolduruldu 
-<pre>
+``` php
 $sBot->addPost(true);
-</pre>
+```
 
 İkinci örnek ise All in one seo ayarlarının doldurulmasını istedim ama eklenen yazıdan zaten sitemde var ise bir daha eklenmemesini istedim bundan dolayı ise ikinci parametre'ye de true değerini gönderdim 
-<pre>
+``` php
 $sBot->addPost(true,true);
-</pre>
+```
 
 eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. 
 
@@ -145,17 +145,17 @@ yayınların durumunu belirlemek için "status" değişkenine durumu göndermeni
 
 defult olarak publish değerini almaktadır örnek kullanım
 
-<pre>
+``` php
 $sBot->status="draft";
-</pre>
+```
 
 Yayını Zamanlama
 ===========================
 Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s / Y-m-d H:i:s  ) yani -> 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
 örnek kullanımı
-<pre>
+``` php
 $sBot->time="2014-07-27 18:00:00";
-</pre>
+```
 
 Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.
 
