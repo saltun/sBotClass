@@ -4,7 +4,8 @@ sBotClass
 
 WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) 
 
-- eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. 
+- Düz kullanım için example.php dosyasına bakınız eklenti biçiminde kullanmak için ise sBotPlugins klasörüne bakınız
+- Eski 13.08.2014 güncellemesinden önceki sürümlerde wp-content/uploads/images dizini olmak zorundadır.
 
 Dikkat ( Watch out! ) 
 =========
