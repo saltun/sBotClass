@@ -46,6 +46,10 @@ public $time=NULL;
 
 
           $savepath = ABSPATH."wp-content/uploads/images/";
+
+          if (!file_exists($savepath)) {
+            mkdir($savepath, 0777);
+          }
           $file = explode('/',$url);
           $count = count($file);
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
@@ -105,7 +109,7 @@ public $time=NULL;
           }
 
 
-          // add meta tags ( özel alanları ekle )
+          // add meta tags ( çzel alanları ekle )
           if (isset($this->metas)) {
               $count=count($this->metas);
 
