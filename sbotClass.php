@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 31.07.2014
+* Update : 13.08.2014
 */
 
 cLass sBotClass{
@@ -45,7 +45,7 @@ public $time=NULL;
     
 
 
-          $savepath = "../wp-content/uploads/images/";
+          $savepath = ABSPATH."wp-content/uploads/images/";
           $file = explode('/',$url);
           $count = count($file);
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
@@ -74,15 +74,15 @@ public $time=NULL;
 
   public function addPost($allinoneseo=false,$varyok=false){
 
-	    if ($varyok==true) {
-	       $xs = get_page_by_title( $this->title, OBJECT, 'post' );
-	        if (!$xs) {
-	          
-	        }else{
-	          die();
-	        }
-	    }
-	     
+      if ($varyok==true) {
+         $xs = get_page_by_title( $this->title, OBJECT, 'post' );
+          if (!$xs) {
+            
+          }else{
+            die();
+          }
+      }
+       
 
             $my_post = array();
             $my_post['post_title'] =  $this->title;
@@ -96,16 +96,16 @@ public $time=NULL;
 
             $post_id= wp_insert_post( $my_post );
          
-         	if ($allinoneseo) {
-	         	// all in one seo
-		            add_post_meta($post_id,"_aioseop_title",$this->title);
-		            add_post_meta($post_id,"_aioseop_description",$this->content);
-		            add_post_meta($post_id,"_aioseop_keywords",$this->tags);
-	            // all in one seo 
-         	}
+          if ($allinoneseo) {
+            // all in one seo
+                add_post_meta($post_id,"_aioseop_title",$this->title);
+                add_post_meta($post_id,"_aioseop_description",$this->content);
+                add_post_meta($post_id,"_aioseop_keywords",$this->tags);
+              // all in one seo 
+          }
 
 
-          // add meta tags ( çzel alanları ekle )
+          // add meta tags ( özel alanları ekle )
           if (isset($this->metas)) {
               $count=count($this->metas);
 
