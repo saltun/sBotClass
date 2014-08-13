@@ -9,14 +9,6 @@ WordPress Bot Yazma Sınıfı ( Wordpress Bot Class )
 Dikkat ( Watch out! ) 
 =========
 Tr : 
-Sınıfı kullanmak için wp-content klasörünün içine uploads klasörünü  ve bunun içinde'de images klasörünü oluşturmuş olmanız gerekir.
-
-En : 
-To use the class wp-content uploads folder into the folder and the images folder inside of it must be created.
-
-Note 2 : 
-
-Tr : 
 Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olarak belirtirken resmin seo'ya uygun şekilde dosyanın adlanması için   "thumbnail" method'unu  "title" method'undan sonra kullanınız 
 
 En : Whether to download pictures from addresses in the classroom as it highlighted the picture when specifying the file in accordance with seo be termed the "thumbnail" the method "title" method after use
