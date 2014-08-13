@@ -161,6 +161,10 @@ $sBot->time="2014-07-27 18:00:00";
 
 Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.
 
+Örnekler
+===========================
+example.php dosyası wordpress'e harici bir şekilde sınıfı kullanmanızı sağlar sBotPlugins klasörü ise wordpress'e eklenti biçiminde calışmanız için örnek bir uygulama sunar.
+
 Author : Savaş Can Altun
 Mail : savascanaltun@gmail.com
 Web : http://savascanaltun.com.tr

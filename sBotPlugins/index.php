@@ -1,7 +1,37 @@
 <?php
 
-	/* WordPress'e harici bir sayfadan işlem yaptıracağımız için wp-load.php'i dahil ettiriyoruz */
-		require(dirname(__FILE__) . '/wp-load.php');
+/*
+
+Plugin Name: sBotClass
+
+Plugin URI: http://savascanaltun.com.tr
+
+Description: sBotClass örnek kullanım eklentisi
+
+Author: Savaş Can ALTUN 
+
+Version: 1.0
+
+Author URI: http://savascanaltun.com.tr
+
+*/
+
+
+add_action("admin_menu","botMenu");
+
+function botMenu()
+
+{
+
+	add_menu_page( "Ana Sayfa", "sBotClass", 10, "sBotClass", "sBotClass", NULL, "145" );
+
+
+}
+
+
+function sBotClass(){
+
+
 
 
 		include "sbotClass.php";
@@ -38,5 +68,7 @@
 		* ikinci alan true gider ise aynı içerikten var ise eklemez eğer false veya boş giderse aynı içerikten olsa dahi ekler
 		*/
 		$sBot->addPost(true,true);
+
+}
 
 ?>
