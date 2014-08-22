@@ -152,6 +152,16 @@ Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time
 $sBot->time="2014-07-27 18:00:00";
 ```
 
++ Özellikler
+===========================
+-> Kısaltma ( shorten ) 
+``` php
+$sBot->shorten("Yazı",Sayi);
+örnek
+$sBot->shorten("Savaş Can ALTUN",3);
+-> Sav...
+```
+
 Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.
 
 Örnekler
