@@ -21,6 +21,9 @@ En : Whether to download pictures from addresses in the classroom as it highligh
 		
 ```
 
+Not  : 
+Eğer
+
 I Love You Translate -_-
 
 Sınıfı yükleyip Calıştıralım
@@ -53,6 +56,20 @@ Etiketler ( Tags )
 $sBot->tags="tags,etiket,savascanaltun,php";
 ```
 
+Açıklama ( Description) 
+===========================
+Açıklamayı ayarlamak normal değişken tanımlamak gibidir buradaki en önemli nokta 160 karakteri geçmemesidir bir çok arama motoru sadece 160 karakter görmektedir. 
+all in one seo default olarak 160 karaktere'e içeriği bütünlemeye ayarlıdır bu özelliği kullanmaz iseniz içeriğiniz ilk 160 karakterini otomatik belirleyecektir.
+
+``` php
+$sBot->description="Yazımın açıklaması";
+```
+Uzun içerikleri 160 karaktere ayarlamak için ise shorten fonksiyonunu kullanmanız gerekmektedir
+
+``` php
+$sBot->description=$sBot->shorten("Yazımın açıklaması",160);
+```
+buradaki 160 sayısı kaç karaktere sınırlanacağını belirtir. bunu yükselte bilir veya azalta bilirsiniz. 
 
 Kategori ( Category ) 
 ===========================
