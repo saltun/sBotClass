@@ -114,7 +114,7 @@ public $description=NULL;
           if ($allinoneseo) {
 
             if (empty($this->description)) {
-              $this->description=$this->shorten($this->content);
+              $this->description=$this->shorten($this->content,160);
             }
             
             // all in one seo
