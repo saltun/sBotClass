@@ -83,7 +83,7 @@ public $time=NULL;
           if (!$xs) {
             
           }else{
-            die();
+            return false;
           }
       }
        
