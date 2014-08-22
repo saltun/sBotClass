@@ -19,7 +19,7 @@ public $cat;
 public $metas;
 public $status="publish";
 public $time=NULL;
-
+public $description=NULL;
 
   public function __construct(){
 
@@ -28,6 +28,17 @@ public $time=NULL;
         }
                 
     }
+
+  function shorten($kelime, $str = 10)
+    {
+          if (strlen($kelime) > $str)
+          {
+            if (function_exists("mb_substr")) $kelime = mb_substr($kelime, 0, $str, "UTF-8").'..';
+            else $kelime = substr($kelime, 0, $str).'..';
+          }
+          return $kelime;
+    }
+
 
   public function sef($s) {
         $tr = array('ş','Ş','ı','İ','ğ','Ğ','ü','Ü','ö','Ö','Ç','ç');
@@ -101,9 +112,14 @@ public $time=NULL;
             $post_id= wp_insert_post( $my_post );
          
           if ($allinoneseo) {
+
+            if (empty($this->description)) {
+              $this->description=$this->shorten($this->content);
+            }
+            
             // all in one seo
                 add_post_meta($post_id,"_aioseop_title",$this->title);
-                add_post_meta($post_id,"_aioseop_description",$this->content);
+                add_post_meta($post_id,"_aioseop_description",$this->description);
                 add_post_meta($post_id,"_aioseop_keywords",$this->tags);
               // all in one seo 
           }
