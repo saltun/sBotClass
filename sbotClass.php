@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 13.08.2014
+* Update : 23.08.2014
 */
 
 cLass sBotClass{
@@ -29,14 +29,14 @@ public $description=NULL;
                 
     }
 
-  function shorten($kelime, $str = 10)
+  function shorten($keyword, $str = 10)
     {
-          if (strlen($kelime) > $str)
+          if (strlen($keyword) > $str)
           {
-            if (function_exists("mb_substr")) $kelime = mb_substr($kelime, 0, $str, "UTF-8").'..';
-            else $kelime = substr($kelime, 0, $str).'..';
+            if (function_exists("mb_substr")) $keyword = mb_substr($keyword, 0, $str, "UTF-8").'..';
+            else $keyword = substr($keyword, 0, $str).'..';
           }
-          return $kelime;
+          return $keyword;
     }
 
 
