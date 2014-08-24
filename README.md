@@ -49,6 +49,27 @@ $sBot->title="Deneme Başlık - Title ";
 $sBot->content="Deneme İçerik - Demo Content";
 ```
 
+Güncellenmiş İçerik ( updated content )
+===========================
+Bildiğiniz gibi içeriklerinizde karşı siteden gelen resim dosyaları mevcut olabilir ama sBotClass ile gelen default özeliklerden biri olan new_content() fonksiyonu ile bu resimleri
+kendi sunucunuza kaydedip linklerini güncellete bilirsiniz.
+örnek kullanım alttadır.
+
+``` php
+
+$icerik='
+<a href="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"><img src="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"  /></a>
+<a href="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&w=178&h=141&zc=1"><img src="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&w=178&h=141&zc=1"></a>
+';
+echo $sBot->new_content($icerik);
+```
+Yukarıdaki kullanım biçiminde otomatik olarak içerik kısmındaki linkler kendi sitemize indirilmiş resim adresi ile güncellenecektir örnek bir görünüm alttaki tarz olacaktır.
+<pre>
+<a href="http://siteadi.com/wp-content/uploads/images/baslik-12.jpg"><img src="http://siteadi.com/wp-content/uploads/images/baslik-12.jpg"  /></a>
+<a href="http://siteadi.com/wp-content/uploads/images/baslik-123.jpg"><img src="http://siteadi.com/wp-content/uploads/images/baslik-123.jpg"></a>
+
+</pre>
+ böylece içerikteki resimler kendi resimlerimiz ile güncellenmiş olacaktır.
 Etiketler ( Tags ) 
 ===========================
 İçeriğiniz için etiketleri tags parametresi ile göndere bilirsiniz. ( , ile ayırınız ) 

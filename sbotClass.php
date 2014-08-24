@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 23.08.2014
+* Update : 24.08.2014
 */
 
 cLass sBotClass{
@@ -85,6 +85,31 @@ public $description=NULL;
 
           return  "/path/to/wp-content/uploads/images/".$fullfilename;
   }
+
+  public function save_image($par){
+
+    /* save content image */
+
+    $newlink=$this->download_image($par);
+    $newlink=str_replace("/path/to/","",$newlink);
+    return get_site_url()."/".$newlink; 
+
+
+  }
+
+  /* new content ( image download new link ) */
+  public function new_content($kaynak){
+        $desen='#\bhttps?:\/\/\S+(?:png|jpg|gif)#si';
+        preg_match_all($desen,$kaynak,$linkler);
+        $linkler=array_unique($linkler[0]);
+        foreach ($linkler as  $link) {
+              $newlink=$this->save_image($link);
+              $kaynak=str_replace($link,$newlink,$kaynak);
+        }
+        return  $kaynak;
+
+  }
+
 
 
   public function addPost($allinoneseo=false,$varyok=false){
