@@ -64,11 +64,10 @@ $icerik='
 echo $sBot->new_content($icerik);
 ```
 Yukarıdaki kullanım biçiminde otomatik olarak içerik kısmındaki linkler kendi sitemize indirilmiş resim adresi ile güncellenecektir örnek bir görünüm alttaki tarz olacaktır.
-<pre>
+``` html
 <a href="http://siteadi.com/wp-content/uploads/images/baslik-12.jpg"><img src="http://siteadi.com/wp-content/uploads/images/baslik-12.jpg"  /></a>
 <a href="http://siteadi.com/wp-content/uploads/images/baslik-123.jpg"><img src="http://siteadi.com/wp-content/uploads/images/baslik-123.jpg"></a>
-
-</pre>
+```
  böylece içerikteki resimler kendi resimlerimiz ile güncellenmiş olacaktır.
 Etiketler ( Tags ) 
 ===========================
