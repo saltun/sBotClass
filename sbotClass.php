@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 24.08.2014
+* Update : 25.08.2014
 */
 
 cLass sBotClass{
@@ -99,7 +99,7 @@ public $description=NULL;
 
   /* new content ( image download new link ) */
   public function new_content($kaynak){
-        $desen='#\bhttps?:\/\/\S+(?:png|jpg|gif)#si';
+        $desen='#\bhttps?:\/\/\S+(?:png|jpg|gif|Jpeg)#si';
         preg_match_all($desen,$kaynak,$linkler);
         $linkler=array_unique($linkler[0]);
         foreach ($linkler as  $link) {
