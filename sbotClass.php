@@ -134,8 +134,15 @@ public $description=NULL;
             $my_post['tags_input'] = $this->tags;
 
 
-            $post_id= wp_insert_post( $my_post );
-         
+            remove_filter('content_save_pre', 'wp_filter_post_kses');
+            remove_filter('content_filtered_save_pre', 'wp_filter_post_kses');
+          
+           $post_id= wp_insert_post( $my_post );
+      
+                  
+            add_filter('content_save_pre', 'wp_filter_post_kses');
+            add_filter('content_filtered_save_pre', 'wp_filter_post_kses');
+               
           if ($allinoneseo) {
 
             if (empty($this->description)) {
