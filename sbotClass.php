@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 27.08.2014
+* Update : 28.09.2014
 */
 
 cLass sBotClass{
