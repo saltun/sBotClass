@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 28.09.2014
+* Update : 29.10.2014
 */
 
 cLass sBotClass{
@@ -64,26 +64,29 @@ public $description=NULL;
           $file = explode('/',$url);
           $count = count($file);
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
+
+         if (!extension_loaded(curl)) { 
+                die("Extension yuklu  degil socket deneyebilirsin"); 
+            } 
+
+          $ch = curl_init("$url"); 
+          if (!$ch) { 
+              die("Curl oturumu baslatamadim.."); 
+          } 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+              curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,false);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $data = curl_exec($ch); 
+        curl_close($ch); 
+
+
+        $islem = fopen($savepath.$fullfilename,'w+'); 
+        fwrite($islem, $data); 
+        fclose($islem); 
+
+       return  "/path/to/wp-content/uploads/images/".$fullfilename;
           
-          if(function_exists('curl_init'))
-          {
-          $fp = fopen($savepath.$fullfilename,'w+');
-          $ch = curl_init();
-          curl_setopt($ch , CURLOPT_URL, $url);
-          curl_setopt($ch , CURLOPT_USERAGENT, 'firefox/2.0.11');
-          curl_setopt($ch , CURLOPT_FILE, $fp);
-          curl_setopt( $ch , CURLOPT_FOLLOWLOCATION , 1 );
-
-          curl_exec($ch);
-          curl_close($ch);
-          fclose($fp);
-          }
-          else
-          {
-          copy($url,$savepath.$fullfilename); 
-          }  
-
-          return  "/path/to/wp-content/uploads/images/".$fullfilename;
   }
 
   public function save_image($par){
