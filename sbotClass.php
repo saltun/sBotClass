@@ -53,7 +53,14 @@ public $description=NULL;
     }
 
   public function download_image($url){
-    
+      
+        /* konu var ise resimleri indirme ! */
+         $xs = get_page_by_title( $this->title, OBJECT, 'post' );
+          if (!$xs) {
+            
+          }else{
+                return false;
+          }
 
 
           $savepath = ABSPATH."wp-content/uploads/images/";
