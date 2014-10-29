@@ -149,7 +149,8 @@ public $description=NULL;
           if ($allinoneseo) {
 
             if (empty($this->description)) {
-              $this->description=$this->shorten($this->content,160);
+             $defaultdesc=strip_tags($this->content);
+              $this->description=$this->shorten($defaultdesc,160);
             }
             
             // all in one seo
