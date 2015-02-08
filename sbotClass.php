@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 29.10.2014
+* Update : 08.02.2015
 */
 
 cLass sBotClass{
@@ -137,6 +137,7 @@ public $description=NULL;
             $my_post = array();
             $my_post['post_title'] =  $this->title;
             $my_post['post_content'] = $this->content;
+            $my_post['post_date'] = $this->time;
             $my_post['post_date_gmt'] = $this->time;
             $my_post['post_status'] =  $this->status;
             $my_post['post_author'] = $this->content;
