@@ -26,6 +26,10 @@ public $description=NULL;
         if(!function_exists('wp_get_current_user')) {
               include(ABSPATH . "wp-includes/pluggable.php"); 
         }
+
+        if (!function_exists('wp_insert_category')) {
+           include(ABSPATH . "wp-admin/includes/taxonomy.php"); 
+        }
                 
     }
 
@@ -209,6 +213,13 @@ public $description=NULL;
           $attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
           wp_update_attachment_metadata( $attach_id, $attach_data );
           set_post_thumbnail($post_id,$attachment_id);
+
+  }
+
+  public function add_category($name,$description,$slug=NULL){
+
+       $cat = array('cat_name' => $name,'category_description' => $description,'category_nicename' => $slug,'category_parent' => '' );
+        return $cat_id = wp_insert_category($cat);
 
   }
 

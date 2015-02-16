@@ -1,7 +1,7 @@
 <?php
 
-	/* WordPress'e harici bir sayfadan işlem yaptıracağımız için wp-load.php'i dahil ettiriyoruz */
-		require(dirname(__FILE__) . '/wp-load.php');
+		/* WordPress'e harici bir sayfadan işlem yaptıracağımız için wp-load.php'i dahil ettiriyoruz */
+		include ABSPATH."wp-load.php";
 
 
 		include "sbotClass.php";
@@ -38,5 +38,24 @@
 		* ikinci alan true gider ise aynı içerikten var ise eklemez eğer false veya boş giderse aynı içerikten olsa dahi ekler
 		*/
 		$sBot->addPost(true,true);
+
+
+		/* Kategori Oluşturma 
+			
+			1 ) Kategori Adı 
+			2 ) Kategori Açıklaması
+			3 ) Kategori kısa adresi ( slug adresi ) = Zorunlu değildir boş olur ise kategori adını slug yapıp ekler
+
+			Dönen değer 0 veya kategori id si olarak döner 0 döner ise işlem başarısızdır eklenirken hata olmuş demektir.
+
+			Not : yeni içerik eklenirken kullanıla bilir örnek $sBot->cat=$sBot->add_category.........
+		*/
+
+		$add=$sBot->add_category('Test Kategorisi','sBotClass ile oluşturuldu','test-kategorisi');
+		if ($add) {
+			echo "Eklenen Kategori ID'si => ".$add;
+		}else{
+			echo "Eklenirken sorun oluştu";
+		}
 
 ?>
