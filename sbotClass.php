@@ -144,7 +144,7 @@ public $description=NULL;
             $my_post['post_date'] = $this->time;
             $my_post['post_date_gmt'] = $this->time;
             $my_post['post_status'] =  $this->status;
-            $my_post['post_author'] = $this->content;
+            $my_post['post_author'] = $this->author;
             $my_post['post_category'] = array($this->cat);
             $my_post['tags_input'] = $this->tags;
 
