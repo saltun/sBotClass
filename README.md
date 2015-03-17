@@ -192,9 +192,9 @@ $sBot->time="2014-07-27 18:00:00";
 Kategori Oluşturma
 ===========================
 Siteye yeni bir kategori eklemek isterseniz add_category fonksiyonunu kullanmanız yeterlidir kullanımı ve parametleri altta yer almaktadır.
-1 ) Kategori Adı 
-2 ) Kategori Açıklaması
-3 ) Kategori kısa adresi ( slug adresi ) = Zorunlu değildir boş olur ise kategori adını slug yapıp ekler
+-1 ) Kategori Adı 
+-2 ) Kategori Açıklaması
+-3 ) Kategori kısa adresi ( slug adresi ) = Zorunlu değildir boş olur ise kategori adını slug yapıp ekler
 Dönen değer 0 veya kategori id si olarak döner 0 döner ise işlem başarısızdır eklenirken hata olmuş demektir.
 Not : yeni içerik eklenirken kullanıla bilir örnek $sBot->cat=$sBot->add_category.........
 	
