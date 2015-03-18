@@ -3,51 +3,43 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
     <title>sBotClass by saltun</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>sBotClass</h1>
-          <h2>WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) </h2>
-        </header>
+    <header>
+      <div class="container">
+        <h1>sBotClass</h1>
+        <h2>WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) </h2>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/saltun/sBotClass/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/saltun/sBotClass/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/saltun/sBotClass" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        <section id="downloads">
+          <a href="https://github.com/saltun/sBotClass/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/saltun/sBotClass/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/saltun/sBotClass" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
+      </div>
+    </header>
 
-        <hr>
-
-        <section id="main_content">
-          <h1>
-<a name="sbotclass" class="anchor" href="#sbotclass"><span class="octicon octicon-link"></span></a>sBotClass</h1>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="sbotclass" class="anchor" href="#sbotclass" aria-hidden="true"><span class="octicon octicon-link"></span></a>sBotClass</h1>
 
 <p>WordPress Bot Yazma Sınıfı ( Wordpress Bot Class ) </p>
 
 <ul>
-<li>eklenti biçiminde kullanım için uygundur demo kullanım için example.php dosyasına bakınız.. </li>
-</ul><h1>
-<a name="dikkat--watch-out--" class="anchor" href="#dikkat--watch-out--"><span class="octicon octicon-link"></span></a>Dikkat ( Watch out! ) </h1>
+<li>Düz kullanım için example.php dosyasına bakınız eklenti biçiminde kullanmak için ise sBotPlugins klasörüne bakınız</li>
+<li>Eski 13.08.2014 güncellemesinden önceki sürümlerde wp-content/uploads/images dizini olmak zorundadır.</li>
+</ul>
 
-<p>Tr : 
-Sınıfı kullanmak için wp-content klasörünün içine uploads klasörünü  ve bunun içinde'de images klasörünü oluşturmuş olmanız gerekir.</p>
-
-<p>En : 
-To use the class wp-content uploads folder into the folder and the images folder inside of it must be created.</p>
-
-<p>Note 2 : </p>
+<h1>
+<a id="dikkat--watch-out--" class="anchor" href="#dikkat--watch-out--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dikkat ( Watch out! ) </h1>
 
 <p>Tr : 
 Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olarak belirtirken resmin seo'ya uygun şekilde dosyanın adlanması için   "thumbnail" method'unu  "title" method'undan sonra kullanınız </p>
@@ -56,124 +48,138 @@ Sınıf içerisindeki adresten resim download edip onu öne çıkarılmış olar
 
 <p>Örnek ( example ) </p>
 
-<pre>
-    $sBot-&gt;title="Örnek Yazı - ";
-    $sBot-&gt;thumbnail =  $sBot-&gt;download_image("http://savascanaltun.com/sca.jpeg"); 
-        
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2">    <span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">title</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>Örnek Yazı - <span class="pl-pds">"</span></span>;</span>
+<span class="pl-s2">    <span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">thumbnail</span> <span class="pl-k">=</span>  <span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>download_image(<span class="pl-s1"><span class="pl-pds">"</span>http://savascanaltun.com/sca.jpeg<span class="pl-pds">"</span></span>); </span>
+<span class="pl-s2"></span></pre></div>
+
+<p>Not  : 
+Eğer</p>
 
 <p>I Love You Translate -_-</p>
 
 <h1>
-<a name="s%C4%B1n%C4%B1f%C4%B1-y%C3%BCkleyip-cal%C4%B1%C5%9Ft%C4%B1ral%C4%B1m" class="anchor" href="#s%C4%B1n%C4%B1f%C4%B1-y%C3%BCkleyip-cal%C4%B1%C5%9Ft%C4%B1ral%C4%B1m"><span class="octicon octicon-link"></span></a>Sınıfı yükleyip Calıştıralım</h1>
+<a id="sınıfı-yükleyip-calıştıralım" class="anchor" href="#s%C4%B1n%C4%B1f%C4%B1-y%C3%BCkleyip-cal%C4%B1%C5%9Ft%C4%B1ral%C4%B1m" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sınıfı yükleyip Calıştıralım</h1>
 
-<pre>
-require_once "sbotClass.php";
-
-$sBot = new sBotClass();
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-k">require_once</span> <span class="pl-s1"><span class="pl-pds">"</span>sbotClass.php<span class="pl-pds">"</span></span>;</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-vo">$sBot</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">sBotClass</span>();</span></pre></div>
 
 <h1>
-<a name="%C4%B0%C3%A7erik-i%C3%A7in-ba%C5%9Fl%C4%B1k-belirleme--title-" class="anchor" href="#%C4%B0%C3%A7erik-i%C3%A7in-ba%C5%9Fl%C4%B1k-belirleme--title-"><span class="octicon octicon-link"></span></a>İçerik için başlık belirleme ( title )</h1>
+<a id="İçerik-için-başlık-belirleme--title-" class="anchor" href="#%C4%B0%C3%A7erik-i%C3%A7in-ba%C5%9Fl%C4%B1k-belirleme--title-" aria-hidden="true"><span class="octicon octicon-link"></span></a>İçerik için başlık belirleme ( title )</h1>
 
 <p>Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.</p>
 
-<pre>
-$sBot-&gt;title="Deneme Başlık - Title ";
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">title</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>Deneme Başlık - Title <span class="pl-pds">"</span></span>;</span></pre></div>
 
 <h1>
-<a name="%C4%B0%C3%A7erik--content--" class="anchor" href="#%C4%B0%C3%A7erik--content--"><span class="octicon octicon-link"></span></a>İçerik ( Content ) </h1>
+<a id="İçerik--content--" class="anchor" href="#%C4%B0%C3%A7erik--content--" aria-hidden="true"><span class="octicon octicon-link"></span></a>İçerik ( Content ) </h1>
 
 <p>İçerik eklemek için ise basitce alttaki fonksiyonu kullanmanız yeterli.</p>
 
-<pre>
-$sBot-&gt;content="Deneme İçerik - Demo Content";
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">content</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>Deneme İçerik - Demo Content<span class="pl-pds">"</span></span>;</span></pre></div>
 
 <h1>
-<a name="etiketler--tags--" class="anchor" href="#etiketler--tags--"><span class="octicon octicon-link"></span></a>Etiketler ( Tags ) </h1>
+<a id="güncellenmiş-İçerik--updated-content-" class="anchor" href="#g%C3%BCncellenmi%C5%9F-%C4%B0%C3%A7erik--updated-content-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Güncellenmiş İçerik ( updated content )</h1>
+
+<p>Bildiğiniz gibi içeriklerinizde karşı siteden gelen resim dosyaları mevcut olabilir ama sBotClass ile gelen default özeliklerden biri olan new_content() fonksiyonu ile bu resimleri
+kendi sunucunuza kaydedip linklerini güncellete bilirsiniz.
+örnek kullanım alttadır.</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-vo">$icerik</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">'</span></span></span>
+<span class="pl-s2"><span class="pl-s1">&lt;a href="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"&gt;&lt;img src="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"  /&gt;&lt;/a&gt;</span></span>
+<span class="pl-s2"><span class="pl-s1">&lt;a href="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&amp;w=178&amp;h=141&amp;zc=1"&gt;&lt;img src="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&amp;w=178&amp;h=141&amp;zc=1"&gt;&lt;/a&gt;</span></span>
+<span class="pl-s2"><span class="pl-s1"><span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>new_content(<span class="pl-vo">$icerik</span>);</span></pre></div>
+
+<p>Yukarıdaki kullanım biçiminde otomatik olarak içerik kısmındaki linkler kendi sitemize indirilmiş resim adresi ile güncellenecektir örnek bir görünüm alttaki tarz olacaktır.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://siteadi.com/wp-content/uploads/images/baslik-12.jpg<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://siteadi.com/wp-content/uploads/images/baslik-12.jpg<span class="pl-pds">"</span></span>  /&gt;&lt;/<span class="pl-ent">a</span>&gt;
+&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://siteadi.com/wp-content/uploads/images/baslik-123.jpg<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://siteadi.com/wp-content/uploads/images/baslik-123.jpg<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+
+<p>böylece içerikteki resimler kendi resimlerimiz ile güncellenmiş olacaktır.</p>
+
+<h1>
+<a id="etiketler--tags--" class="anchor" href="#etiketler--tags--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Etiketler ( Tags ) </h1>
 
 <p>İçeriğiniz için etiketleri tags parametresi ile göndere bilirsiniz. ( , ile ayırınız ) </p>
 
-<pre>
-$sBot-&gt;tags="tags,etiket,savascanaltun,php";
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">tags</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>tags,etiket,savascanaltun,php<span class="pl-pds">"</span></span>;</span></pre></div>
 
 <h1>
-<a name="kategori--category--" class="anchor" href="#kategori--category--"><span class="octicon octicon-link"></span></a>Kategori ( Category ) </h1>
+<a id="açıklama--description-" class="anchor" href="#a%C3%A7%C4%B1klama--description-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Açıklama ( Description) </h1>
+
+<p>Açıklamayı ayarlamak normal değişken tanımlamak gibidir buradaki en önemli nokta 160 karakteri geçmemesidir bir çok arama motoru sadece 160 karakter görmektedir. 
+all in one seo default olarak 160 karaktere'e içeriği bütünlemeye ayarlıdır bu özelliği kullanmaz iseniz içeriğiniz ilk 160 karakterini otomatik belirleyecektir.</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">description</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>Yazımın açıklaması<span class="pl-pds">"</span></span>;</span></pre></div>
+
+<p>Uzun içerikleri 160 karaktere ayarlamak için ise shorten fonksiyonunu kullanmanız gerekmektedir</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">description</span><span class="pl-k">=</span><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>shorten(<span class="pl-s1"><span class="pl-pds">"</span>Yazımın açıklaması<span class="pl-pds">"</span></span>,<span class="pl-c1">160</span>);</span></pre></div>
+
+<p>buradaki 160 sayısı kaç karaktere sınırlanacağını belirtir. bunu yükselte bilir veya azalta bilirsiniz. </p>
+
+<h1>
+<a id="kategori--category--" class="anchor" href="#kategori--category--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kategori ( Category ) </h1>
 
 <p>Kategori belirmek içni kullanmanız gereken parametre " cat " bunu sorunsuz kullanmak için wordpress  wp_dropdown_categories fonksiyonunu incelemenizi öneririz.</p>
 
 <p>Kullanmanız gereken parametre </p>
 
-<pre>$sBot-&gt;cat</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">cat</span></span></pre></div>
 
 <h1>
-<a name="yazar--author--" class="anchor" href="#yazar--author--"><span class="octicon octicon-link"></span></a>Yazar ( Author ) </h1>
+<a id="yazar--author--" class="anchor" href="#yazar--author--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yazar ( Author ) </h1>
 
 <p>içeriği ekliyen yazarın id'sini belirmek isterseniz author parametresini kullanmanız yeterli. default olarak 1'e ayarlıdır.</p>
 
-<pre>
-$sBot-&gt;author=1;
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">author</span><span class="pl-k">=</span><span class="pl-c1">1</span>;</span></pre></div>
 
 <h1>
-<a name="%C3%96zel-alanlar--custom-fields--" class="anchor" href="#%C3%96zel-alanlar--custom-fields--"><span class="octicon octicon-link"></span></a>Özel Alanlar ( custom fields ) </h1>
+<a id="Özel-alanlar--custom-fields--" class="anchor" href="#%C3%96zel-alanlar--custom-fields--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Özel Alanlar ( custom fields ) </h1>
 
 <p>Temalarınıza özel alanları doldurmanız için güncellendi ( 26.07.2014 )  kullanımı basitce</p>
 
-<pre>
-$sBot-&gt;metas=array(
-            'keywords'=&gt;'values',
-            'keywords'=&gt;'values'
-            );
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">metas</span><span class="pl-k">=</span><span class="pl-s3">array</span>(</span>
+<span class="pl-s2">            <span class="pl-s1"><span class="pl-pds">'</span>keywords<span class="pl-pds">'</span></span><span class="pl-k">=&gt;</span><span class="pl-s1"><span class="pl-pds">'</span>values<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s2">            <span class="pl-s1"><span class="pl-pds">'</span>keywords<span class="pl-pds">'</span></span><span class="pl-k">=&gt;</span><span class="pl-s1"><span class="pl-pds">'</span>values<span class="pl-pds">'</span></span></span>
+<span class="pl-s2">            );</span></pre></div>
 
 <p>burada dilediğiniz kadar özel alan kullana bilirsiniz yapmanız gereken sadece kelime ( özel alan adını ) yazıp ona değer olarak belirtilen değerleri göndermek sınıf sizin için otomatik olarak özel alanı oluşturup verdiğiniz value ( değeri ) üzerine işleyecektir.</p>
 
 <h1>
-<a name="%C3%96ne-%C3%87%C4%B1kar%C4%B1lan-g%C3%B6rsel--thumbnail-" class="anchor" href="#%C3%96ne-%C3%87%C4%B1kar%C4%B1lan-g%C3%B6rsel--thumbnail-"><span class="octicon octicon-link"></span></a>Öne Çıkarılan Görsel ( thumbnail )</h1>
+<a id="Öne-Çıkarılan-görsel--thumbnail-" class="anchor" href="#%C3%96ne-%C3%87%C4%B1kar%C4%B1lan-g%C3%B6rsel--thumbnail-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Öne Çıkarılan Görsel ( thumbnail )</h1>
 
 <p>Uzak Sunucudan  Resmi kendi sunucumuza kayıt etmek için alttaki download_image fonksiyonunu kullana bilirsiniz.</p>
 
-<pre>
-$sBot-&gt;thumbnail = $sBot-&gt;download_image("http://www.savascanaltun.com/bannerler/125x125.png");
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">thumbnail</span> <span class="pl-k">=</span> <span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>download_image(<span class="pl-s1"><span class="pl-pds">"</span>http://www.savascanaltun.com/bannerler/125x125.png<span class="pl-pds">"</span></span>);</span></pre></div>
 
 <p>Manuel olarak resmin adresini almak için ise ( dikkat etmemiz gereken kısım /path/to kısmıdır.</p>
 
-<pre>
-$sBot-&gt;thumbnail = "/path/to/wp-content/uploads/125x125.png";
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">thumbnail</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">"</span>/path/to/wp-content/uploads/125x125.png<span class="pl-pds">"</span></span>;</span></pre></div>
 
 <h1>
-<a name="verileri-kay%C4%B1t-etmek" class="anchor" href="#verileri-kay%C4%B1t-etmek"><span class="octicon octicon-link"></span></a>Verileri Kayıt Etmek</h1>
+<a id="verileri-kayıt-etmek" class="anchor" href="#verileri-kay%C4%B1t-etmek" aria-hidden="true"><span class="octicon octicon-link"></span></a>Verileri Kayıt Etmek</h1>
 
 <p>Verileri son olarak kayıt etmek için addPost fonksiyonunu kullanmalısınız.</p>
 
-<pre>
-$sBot-&gt;addPost();
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>addPost();</span></pre></div>
 
 <p>Kullanım için 2 adet parametre göndere bilirsiniz bunlardan birincisi all in one seo alanlarının otomatik dolması için diğeri ise yazının eşsiz olup olmaması için kullana bilirsiniz örnek vericek olur isek </p>
 
 <p>All in one seo alanlarının doldurulmasını istediğim için birinci parametre'ye true değeri gönderdim böylece all in one seo alanları dolduruldu </p>
 
-<pre>
-$sBot-&gt;addPost(true);
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>addPost(<span class="pl-c1">true</span>);</span></pre></div>
 
 <p>İkinci örnek ise All in one seo ayarlarının doldurulmasını istedim ama eklenen yazıdan zaten sitemde var ise bir daha eklenmemesini istedim bundan dolayı ise ikinci parametre'ye de true değerini gönderdim </p>
 
-<pre>
-$sBot-&gt;addPost(true,true);
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>addPost(<span class="pl-c1">true</span>,<span class="pl-c1">true</span>);</span></pre></div>
 
 <p>eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. </p>
 
 <h1>
-<a name="yay%C4%B1nlar%C4%B1n-durumunu-belirleme-" class="anchor" href="#yay%C4%B1nlar%C4%B1n-durumunu-belirleme-"><span class="octicon octicon-link"></span></a>Yayınların Durumunu belirleme </h1>
+<a id="yayınların-durumunu-belirleme-" class="anchor" href="#yay%C4%B1nlar%C4%B1n-durumunu-belirleme-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yayınların Durumunu belirleme </h1>
 
 <p>yayınların durumunu belirlemek için "status" değişkenine durumu göndermeniz gerekmektedir kullana bileceğiniz durumlar ve anlamları altta listelenmiştir</p>
 
@@ -183,36 +189,58 @@ $sBot-&gt;addPost(true,true);
 <li>Beklemede :  pending</li>
 <li>Zamanlanmış : future ( eğer zamanlamış iseniz "time" değişkenine taslağın yayınlanacağı tarihi giriniz örnek 2014-07-27 18:00:00 )</li>
 <li>Özel : private</li>
-</ul><p>defult olarak publish değerini almaktadır örnek kullanım</p>
+</ul>
 
-<pre>
-$sBot-&gt;status="draft";
-</pre>
+<p>defult olarak publish değerini almaktadır örnek kullanım</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">status</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>draft<span class="pl-pds">"</span></span>;</span></pre></div>
 
 <h1>
-<a name="yay%C4%B1n%C4%B1-zamanlama" class="anchor" href="#yay%C4%B1n%C4%B1-zamanlama"><span class="octicon octicon-link"></span></a>Yayını Zamanlama</h1>
+<a id="yayını-zamanlama" class="anchor" href="#yay%C4%B1n%C4%B1-zamanlama" aria-hidden="true"><span class="octicon octicon-link"></span></a>Yayını Zamanlama</h1>
 
 <p>Eklenen içeriği otomatik bir süre sonra yayınlanmasını istiyor iseniz time değişkenine tarihi göndermeniz gerekmektir göndereceğiniz tarih formatı  ( Y-m-d G:i:s / Y-m-d H:i:s  ) yani -&gt; 2014-07-27 18:00:00 tarzı bir format biçiminde göndermeniz gerekir
 örnek kullanımı</p>
 
-<pre>
-$sBot-&gt;time="2014-07-27 18:00:00";
-</pre>
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span><span class="pl-vo">time</span><span class="pl-k">=</span><span class="pl-s1"><span class="pl-pds">"</span>2014-07-27 18:00:00<span class="pl-pds">"</span></span>;</span></pre></div>
+
+<h1>
+<a id="kategori-oluşturma" class="anchor" href="#kategori-olu%C5%9Fturma" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kategori Oluşturma</h1>
+
+<p>Siteye yeni bir kategori eklemek isterseniz add_category fonksiyonunu kullanmanız yeterlidir kullanımı ve parametleri altta yer almaktadır.</p>
+
+<ul>
+<li>1.Kategori Adı </li>
+<li>2.Kategori Açıklaması</li>
+<li>3.Kategori kısa adresi ( slug adresi ) = Zorunlu değildir boş olur ise kategori adını slug yapıp ekler
+Dönen değer 0 veya kategori id si olarak döner 0 döner ise işlem başarısızdır eklenirken hata olmuş demektir.
+Not : yeni içerik eklenirken kullanıla bilir örnek $sBot-&gt;cat=$sBot-&gt;add_category.........</li>
+</ul>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>add_category(<span class="pl-s1"><span class="pl-pds">'</span>Test Kategorisi<span class="pl-pds">'</span></span>,<span class="pl-s1"><span class="pl-pds">'</span>sBotClass ile oluşturuldu<span class="pl-pds">'</span></span>,<span class="pl-s1"><span class="pl-pds">'</span>test-kategorisi<span class="pl-pds">'</span></span>);</span></pre></div>
+
+<h1>
+<a id="-Özellikler" class="anchor" href="#-%C3%96zellikler" aria-hidden="true"><span class="octicon octicon-link"></span></a>+ Özellikler</h1>
+
+<p>-&gt; Kısaltma ( shorten ) </p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>shorten(<span class="pl-s1"><span class="pl-pds">"</span>Yazı<span class="pl-pds">"</span></span>,<span class="pl-c1">Sayi</span>);</span>
+<span class="pl-s2"><span class="pl-c1">örnek</span></span>
+<span class="pl-s2"><span class="pl-vo">$sBot</span><span class="pl-k">-&gt;</span>shorten(<span class="pl-s1"><span class="pl-pds">"</span>Savaş Can ALTUN<span class="pl-pds">"</span></span>,<span class="pl-c1">3</span>);</span>
+<span class="pl-s2"><span class="pl-k">-&gt;</span> <span class="pl-c1">Sav</span><span class="pl-k">...</span></span></pre></div>
 
 <p>Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php dosyasına bakınız. örnek kullanımı bula bilirsiniz.</p>
 
+<h1>
+<a id="Örnekler" class="anchor" href="#%C3%96rnekler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Örnekler</h1>
+
+<p>example.php dosyası wordpress'e harici bir şekilde sınıfı kullanmanızı sağlar sBotPlugins klasörü ise wordpress'e eklenti biçiminde calışmanız için örnek bir uygulama sunar.</p>
+
 <p>Author : Savaş Can Altun
 Mail : <a href="mailto:savascanaltun@gmail.com">savascanaltun@gmail.com</a>
-Web : savascanaltun.com.tr</p>
-        </section>
-
-        <footer>
-          sBotClass is maintained by <a href="https://github.com/saltun">saltun</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+Web : <a href="http://savascanaltun.com.tr">http://savascanaltun.com.tr</a></p>
+      </section>
     </div>
+
+    
   </body>
 </html>
