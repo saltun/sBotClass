@@ -129,7 +129,7 @@ public $description=NULL;
   public function addPost($allinoneseo=false,$varyok=false){
 
       if ($varyok==true) {
-         $xs = get_page_by_title( sanitize_title($this->title), OBJECT, 'post' );
+         $xs = get_page_by_title($this->title, OBJECT, 'post' );
           if (!$xs) {
             
           }else{
@@ -139,7 +139,7 @@ public $description=NULL;
        
 
             $my_post = array();
-            $my_post['post_title'] = sanitize_title($this->title);
+            $my_post['post_title'] = $this->title;
             $my_post['post_content'] = $this->content;
             $my_post['post_date'] = $this->time;
             $my_post['post_date_gmt'] = $this->time;
