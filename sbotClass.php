@@ -128,15 +128,26 @@ public $description=NULL;
 
   public function addPost($allinoneseo=false,$varyok=false){
 
-      if ($varyok==true) {
-         $xs = get_page_by_title($this->title, OBJECT, 'post' );
-          if (!$xs) {
-            
-          }else{
-            return false;
-          }
-      }
-       
+            if ($varyok==true) {
+
+              global $wpdb;
+
+              
+             $count=$wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts where post_name  ='".sanitize_title($this->title)."' ");
+             if ($count > 0) {
+
+              return false;
+
+             }else{
+
+                if ($xs = get_page_by_title($this->title, OBJECT, 'post' )) {
+                  return false;
+                }
+
+             }
+
+            }
+             
 
             $my_post = array();
             $my_post['post_title'] = $this->title;
