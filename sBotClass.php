@@ -56,10 +56,9 @@ public $description=NULL;
        return $s;
     }
 
-  public function download_image($url){
-      
-        /* konu var ise resimleri indirme ! */
-          global $wpdb;
+    public function content_control(){
+
+         global $wpdb;
 
             
            $count=$wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts where post_name  ='".sanitize_title($this->title)."' ");
@@ -75,7 +74,18 @@ public $description=NULL;
 
            }
 
-            
+           return true;
+
+    }
+
+  public function download_image($url){
+      
+        /* konu var ise resimleri indirme ! */
+         
+
+          if (!$this->content_control()) {
+            return false;
+          }
 
 
           $savepath = ABSPATH."wp-content/uploads/images/";
@@ -141,21 +151,9 @@ public $description=NULL;
 
             if ($varyok==true) {
 
-              global $wpdb;
-
-              
-             $count=$wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts where post_name  ='".sanitize_title($this->title)."' ");
-             if ($count > 0) {
-
-              return false;
-
-             }else{
-
-                if ($xs = get_page_by_title($this->title, OBJECT, 'post' )) {
-                  return false;
-                }
-
-             }
+                   if (!$this->content_control()) {
+                       return false;
+                    }
 
             }
              
