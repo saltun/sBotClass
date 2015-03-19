@@ -59,12 +59,23 @@ public $description=NULL;
   public function download_image($url){
       
         /* konu var ise resimleri indirme ! */
-         $xs = get_page_by_title( $this->title, OBJECT, 'post' );
-          if (!$xs) {
+          global $wpdb;
+
             
-          }else{
+           $count=$wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts where post_name  ='".sanitize_title($this->title)."' ");
+           if ($count > 0) {
+
+            return false;
+
+           }else{
+
+              if ($xs = get_page_by_title($this->title, OBJECT, 'post' )) {
                 return false;
-          }
+              }
+
+           }
+
+            
 
 
           $savepath = ABSPATH."wp-content/uploads/images/";
