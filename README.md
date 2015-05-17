@@ -169,7 +169,7 @@ $sBot->addPost(true,true);
 
 eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. 
 
-** geri dönen değer 0 ise içerik eklenmemiş 0 değil ise eklenmiş içeriğin numarasıdır. **
+Not : Geri dönen değer 0 ise içerik eklenmemiş 0 değil ise eklenmiş içeriğin numarasıdır. 
 
 
 Yayınların Durumunu belirleme 
