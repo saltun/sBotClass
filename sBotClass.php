@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 19.03.2015
+* Update : 17.05.2015
 */
 
 cLass sBotClass{
@@ -20,6 +20,7 @@ public $metas;
 public $status="publish";
 public $time=NULL;
 public $description=NULL;
+public $password;
 
   public function __construct(){
 
@@ -167,6 +168,7 @@ public $description=NULL;
             $my_post['post_author'] = $this->author;
             $my_post['post_category'] = array($this->cat);
             $my_post['tags_input'] = $this->tags;
+            $my_post['post_password']= $this->password;
 
 
             remove_filter('content_save_pre', 'wp_filter_post_kses');
@@ -234,6 +236,8 @@ public $description=NULL;
           wp_update_attachment_metadata( $attach_id, $attach_data );
           set_post_thumbnail($post_id,$attachment_id);
 
+          return $post_id;
+
   }
 
   public function add_category($name,$description,$slug=NULL){
@@ -246,5 +250,3 @@ public $description=NULL;
 
 }
 
-
-?>
