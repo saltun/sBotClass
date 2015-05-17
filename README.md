@@ -76,6 +76,14 @@ Etiketler ( Tags )
 $sBot->tags="tags,etiket,savascanaltun,php";
 ```
 
+Şifre  ( Password ) 
+===========================
+Oluşturulacak içerik için şifre yani koruma özelliği vermek istiyor iseniz password özelliğini kullana bilirsiniz
+``` php
+$sBot->password="123456"; // 123456 şifresi konuya atandı
+```
+
+
 Açıklama ( Description) 
 ===========================
 Açıklamayı ayarlamak normal değişken tanımlamak gibidir buradaki en önemli nokta 160 karakteri geçmemesidir bir çok arama motoru sadece 160 karakter görmektedir. 
@@ -161,7 +169,7 @@ $sBot->addPost(true,true);
 
 eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. 
 
-
+** geri dönen değer 0 ise içerik eklenmemiş 0 değil ise eklenmiş içeriğin numarasıdır. **
 
 
 Yayınların Durumunu belirleme 
