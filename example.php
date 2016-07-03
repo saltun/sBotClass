@@ -4,7 +4,7 @@
 		include ABSPATH."wp-load.php";
 
 
-		include "sbotClass.php";
+		include "sBotClass.php";
 
 
 		$sBot = new sBotClass();
