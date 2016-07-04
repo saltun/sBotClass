@@ -99,19 +99,21 @@ public $password;
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
 
          if (!extension_loaded(curl)) { 
-                die("Curl eklentisi kurulu değil."); 
-            } 
-
-        $ch = curl_init("$url"); 
-        if (!$ch) { 
-            die("Curl bu adres'e bağlanamadı."); 
-        } 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $data = curl_exec($ch); 
-        curl_close($ch); 
+                /* curl kurulu değil file_get_contents ile adresi okuyalım */
+                $data=file_get_contents($url);
+                
+         }else{
+          $ch = curl_init("$url"); 
+          if (!$ch) { 
+              die("Curl bu adres'e bağlanamadı."); 
+          } 
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,false);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          $data = curl_exec($ch); 
+          curl_close($ch); 
+        }
 
   
         $saveFile=file_put_contents($savepath."/".$fullfilename, $data);
