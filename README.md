@@ -29,7 +29,7 @@ I Love You Translate -_-
 Sınıfı yükleyip Calıştıralım
 ===========================
 ``` php
-require_once "sbotClass.php";
+require_once "sBotClass.php";
 
 $sBot = new sBotClass();
 ```
