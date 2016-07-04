@@ -5,7 +5,7 @@
 * Mail : savascanaltun@gmail.com
 * GİT : http://github.com/saltun
 * Date : 22.06.2014
-* Update : 17.05.2015
+* Update : 04.07.2016
 */
 
 cLass sBotClass{
@@ -89,46 +89,50 @@ public $password;
           }
 
 
-          $savepath = ABSPATH."wp-content/uploads/images/";
+          $save=wp_upload_dir();
+          $savepath = $save['path'];
 
-          if (!file_exists($savepath)) {
-            mkdir($savepath, 0777);
-          }
+         
+          
           $file = explode('/',$url);
           $count = count($file);
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
 
          if (!extension_loaded(curl)) { 
-                die("Extension yuklu  degil socket deneyebilirsin"); 
+                die("Curl eklentisi kurulu değil."); 
             } 
 
-          $ch = curl_init("$url"); 
-          if (!$ch) { 
-              die("Curl oturumu baslatamadim.."); 
-          } 
+        $ch = curl_init("$url"); 
+        if (!$ch) { 
+            die("Curl bu adres'e bağlanamadı."); 
+        } 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-              curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
-              curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,false);
-              curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $data = curl_exec($ch); 
         curl_close($ch); 
 
+  
+        $saveFile=file_put_contents($savepath."/".$fullfilename, $data);
+        $saveUrl=$save['url']."/".$fullfilename;
 
-        $islem = fopen($savepath.$fullfilename,'w+'); 
-        fwrite($islem, $data); 
-        fclose($islem); 
+        return $saveUrl;
+        
 
-       return  "/path/to/wp-content/uploads/images/".$fullfilename;
+
+
+   
           
   }
 
   public function save_image($par){
-
+  
     /* save content image */
 
     $newlink=$this->download_image($par);
-    $newlink=str_replace("/path/to/","",$newlink);
-    return get_site_url()."/".$newlink; 
+    return $newlink;
+    
 
 
   }
@@ -249,4 +253,3 @@ public $password;
 
 
 }
-
