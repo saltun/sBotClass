@@ -38,6 +38,7 @@ $sBot = new sBotClass();
 İçerik için başlık belirleme ( title )
 ===========================
 Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.
+Not: Başlıklar farklı olmak zorundadır eğer "Test" diye bir yazınız varsa ikinci yazıyı tekrardan "Test" olarak giremezsiniz.
 ``` php
 $sBot->title="Deneme Başlık - Title ";
 ```
