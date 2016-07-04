@@ -59,7 +59,6 @@ kendi sunucunuza kaydedip linklerini güncellete bilirsiniz.
 
 $icerik='
 <a href="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"><img src="http://savascanaltun.com.tr/wp-content/themes/sca2/images/logo.png"  /></a>
-<a href="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&w=178&h=141&zc=1"><img src="http://savascanaltun.com.tr/timthumb.php?src=http://savascanaltun.com.tr/wp-content/uploads/2014/08/php-framework.jpg&w=178&h=141&zc=1"></a>
 ';
 echo $sBot->new_content($icerik);
 ```
