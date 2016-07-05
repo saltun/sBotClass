@@ -26,7 +26,8 @@ Eğer
 
 I Love You Translate -_-
 
-Sınıfı yükleyip Calıştıralım
+TR:Sınıfı yükleyip çalıştıralım
+En:Let's run our class
 ===========================
 ``` php
 require_once "sBotClass.php";
@@ -35,9 +36,11 @@ $sBot = new sBotClass();
 ```
 
 
-İçerik için başlık belirleme ( title )
+Tr:İçerik için başlık belirleme
+En:Set title to content
 ===========================
-Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.
+TR:Başlık eklemek için alttaki yöntem ile basitce içerik için title yani başlık belirliye bilirsiniz.
+En:With the following that method you can add your content title.
 ``` php
 $sBot->title="Deneme Başlık - Title ";
 ```
@@ -77,7 +80,7 @@ $sBot->tags="tags,etiket,savascanaltun,php";
 
 Şifre  ( Password ) 
 ===========================
-Oluşturulacak içerik için şifre yani koruma özelliği vermek istiyor iseniz password özelliğini kullana bilirsiniz
+Oluşturulacak içerik için şifre yani koruma özelliği vermek istiyor iseniz password özelliğini kullana bilirsiniz.
 ``` php
 $sBot->password="123456"; // 123456 şifresi konuya atandı
 ```
