@@ -1,27 +1,73 @@
 <?php
-/*
-* Author : Savaş Can Altun
-* Web : http://savascanaltun.com.tr
-* Mail : savascanaltun@gmail.com
-* GİT : http://github.com/saltun
+/**
+* @author  Savaş Can ALTUn <savascanaltun@gmail.com>
+* @link  http://savascanaltun.com.tr
+* @link  http://github.com/saltun
 * Date : 22.06.2014
 * Update : 04.07.2016
 */
 
 cLass sBotClass{
 
+/**
+* @var string
+*/
 public $thumbnail;
+
+/**
+* @var string
+*/
 public $title;
+
+/**
+* @var string
+*/
 public $content;
+
+/**
+* @var int
+*/
 public $author=1;
+
+/**
+* @var string
+*/
 public $tags;
+
+/**
+* @var int
+*/
 public $cat;
+
+/**
+* @var string
+*/
 public $metas;
+
+/**
+* @var string
+*/
 public $status="publish";
+
+/**
+* @var null|string
+*/
 public $time=NULL;
+
+/**
+* @var null|string
+*/
 public $description=NULL;
+
+/**
+* @var string
+*/
 public $password;
 
+  /**
+  * Sınıfın Başlangıcı ve  Gerekli fonksiyonlar için wordpress dosyalarının dahil edilişi.
+  * @return void
+  */
   public function __construct(){
 
         if(!function_exists('wp_get_current_user')) {
@@ -34,7 +80,14 @@ public $password;
                 
     }
 
-  function shorten($keyword, $str = 10)
+    /**
+    * Kısaltma fonksiyonu
+    * @param string Yazı değeri alınır
+    * @param int Kısaltılacak karakter sayısı alınır
+    * @return string Düzenlenen içerik geri döndürülür
+    */ 
+
+  public function shorten($keyword, $str = 10)
     {
           if (strlen($keyword) > $str)
           {
@@ -44,7 +97,11 @@ public $password;
           return $keyword;
     }
 
-
+    /**
+    * Sef link oluşturma metotu
+    * @param string
+    * @return string
+    */
   public function sef($s) {
         $tr = array('ş','Ş','ı','İ','ğ','Ğ','ü','Ü','ö','Ö','Ç','ç');
         $eng = array('s','s','i','i','g','g','u','u','o','o','c','c');
@@ -56,7 +113,10 @@ public $password;
         $s = trim($s, '-');
        return $s;
     }
-
+    /**
+    * İçerik var mı ? yokmu ? kontrolü
+    * @return bool|boolean
+    */
     public function content_control(){
 
          global $wpdb;
@@ -79,6 +139,11 @@ public $password;
 
     }
 
+  /**
+  * Görseli indirme metotu 
+  * @param string Görsel Adresi
+  * @return string İndirilmiş görselin kaydedildiği adres
+  */
   public function download_image($url){
       
         /* konu var ise resimleri indirme ! */
@@ -127,7 +192,11 @@ public $password;
    
           
   }
-
+  /**
+  * Görseli kaydetme metotu
+  * @param string
+  * @return string
+  */
   public function save_image($par){
   
     /* save content image */
@@ -139,7 +208,13 @@ public $password;
 
   }
 
-  /* new content ( image download new link ) */
+  /**
+  * İçerikteki linkleri ( görselleri ) indirme metotu
+  * @param string 
+  * @return string
+  * @see MyClass::save_image()
+  */
+
   public function new_content($kaynak){
         $desen='#\bhttps?:\/\/\S+(?:png|jpg|gif|Jpeg)#si';
         preg_match_all($desen,$kaynak,$linkler);
@@ -153,6 +228,12 @@ public $password;
   }
 
 
+  /**
+  * İçeriği Kaydetme metotu 
+  * @param bool|boolean True yada False değeri 
+  * @param bool|boolean True yada False değeri 
+  * @return null|int Ya boş değer döner yada kaydedilen içeriğin id değeri 
+  */
 
   public function addPost($allinoneseo=false,$varyok=false){
 
@@ -246,6 +327,13 @@ public $password;
 
   }
 
+  /**
+  * Yeni Kategori Oluşturma metotu 
+  * @param string Kategori İsim değeri
+  * @param string  Kategori açıklaması
+  * @param null|string Ya boş değer yada belirtilen sef slug adresi
+  * @return null|int Ya boş değer yada kategori id değeri
+  */
   public function add_category($name,$description,$slug=NULL){
 
        $cat = array('cat_name' => $name,'category_description' => $description,'category_nicename' => $slug,'category_parent' => '' );
