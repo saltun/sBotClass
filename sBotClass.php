@@ -5,6 +5,7 @@
 * @link  http://github.com/saltun
 * Date : 22.06.2014
 * Update : 04.07.2016
+* @example example.php
 */
 
 cLass sBotClass{
