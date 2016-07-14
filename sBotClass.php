@@ -283,7 +283,7 @@ public $password;
           }
 
 
-          // add meta tags ( çzel alanları ekle )
+          // add meta tags ( özel alanları ekle )
           if (isset($this->metas)) {
               $count=count($this->metas);
 
