@@ -1,11 +1,11 @@
 <?php
 /**
-* @author  Savaş Can ALTUn <savascanaltun@gmail.com>
+* @author Savaş Can ALTUn <savascanaltun@gmail.com>
 * @link  http://savascanaltun.com.tr
 * @link  http://github.com/saltun
-* Date : 22.06.2014
-* Update : 04.07.2016
+* @since 22.06.2014
 * @example example.php
+* @version 2.0
 */
 
 cLass sBotClass{
