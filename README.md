@@ -230,6 +230,6 @@ Tüm Kullanımlar üstteki şekildedir eğer sorun yaşar iseniz  example.php do
 ===========================
 example.php dosyası wordpress'e harici bir şekilde sınıfı kullanmanızı sağlar sBotPlugins klasörü ise wordpress'e eklenti biçiminde calışmanız için örnek bir uygulama sunar.
 
-Author : Savaş Can Altun
+Author : [Savaş Can Altun](http://savascanaltun.com.tr)
 Mail : savascanaltun@gmail.com
-Web : http://savascanaltun.com.tr
+Web : [http://savascanaltun.com.tr](http://savascanaltun.com.tr)
