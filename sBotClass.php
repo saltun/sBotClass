@@ -254,7 +254,7 @@ public $password;
             $my_post['post_date_gmt'] = $this->time;
             $my_post['post_status'] =  $this->status;
             $my_post['post_author'] = $this->author;
-            $my_post['post_category'] = $this->cat;
+            $my_post['post_category'] = array($this->cat);
             $my_post['tags_input'] = $this->tags;
             $my_post['post_password']= $this->password;
 
