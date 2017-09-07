@@ -171,7 +171,14 @@ $sBot->addPost(true,true);
 
 eğer sadece benzersiz olup all in one seo kullanılmasın demek ister iseniz false,true şeklinde belirlemeniz yeterlidir. 
 
+Ek olarak ayrıca eklenen yazının id değerini size geri çevirmektedir.   Örnek vermek gerekir ise ; 
+``` php
+echo $sBot->addPost(true,true); // return : 1 
+```
+
 Not : Geri dönen değer 0 ise içerik eklenmemiş 0 değil ise eklenmiş içeriğin numarasıdır. 
+
+
 
 
 Yayınların Durumunu belirleme 
