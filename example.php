@@ -37,7 +37,8 @@
 		* Birinci parametre true gider ise all in one seo alanları otomatik dolar
 		* ikinci alan true gider ise aynı içerikten var ise eklemez eğer false veya boş giderse aynı içerikten olsa dahi ekler
 		*/
-		$sBot->addPost(true,true);
+
+		echo $sBot->addPost(true,true); // eklenen yazının numarasını geri çevirip ekrana yazdırır. 
 
 
 		/* Kategori Oluşturma 
