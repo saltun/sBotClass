@@ -164,7 +164,7 @@ public $password;
           $count = count($file);
           $fullfilename = $this->sef($this->title)."-".rand(0,100000).".jpg";
 
-         if (!extension_loaded(curl)) { 
+         if (!function_exists('curl_version')) { 
                 /* curl kurulu değil file_get_contents ile adresi okuyalım */
                 $data=file_get_contents($url);
                 
